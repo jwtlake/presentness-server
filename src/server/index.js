@@ -10,11 +10,11 @@ var server = new Hapi.Server();
 
 // Configure connection
 server.connection({
-	port: settings.get('port');
+	port: settings.get('hapi:port')
 });
 
 // Add Routes 
-server.routes(routes);
+server.route(routes);
 
 // Start Server
 server.start(function () {

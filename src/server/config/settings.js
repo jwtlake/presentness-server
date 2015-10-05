@@ -6,7 +6,7 @@ var nconf = require('nconf');
 // example connection settings
 var defaults = {
 	hapi:{
-		port: 3000
+		port: 3001
 	},
 	postgress:{
 		host: 'localhost',
