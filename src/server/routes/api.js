@@ -3,9 +3,6 @@
 /** Dependencies **/
 var dev_objects = require(appRoot + '/src/server/models/test-device-list.js'); 
 
-//** Exports **//
-module.exports = routes;
-
 /** API Routes **/ 
 var routes = [
 	{
@@ -37,3 +34,6 @@ function postDevice(request, reply){
 	console.log(request.payload);
 	reply('Build me!');
 };
+
+//** Exports **//
+module.exports = routes;
