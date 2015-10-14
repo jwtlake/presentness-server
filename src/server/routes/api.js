@@ -26,10 +26,12 @@ function getDeviceList(request, reply){
 };
 
 function getDevice(request, reply){
+	console.log(request);
 	reply('Build me!');
 };
 
 function postDevice(request, reply){
+	console.log(request);
 	reply('Build me!');
 };
 
