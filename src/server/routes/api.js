@@ -3,9 +3,6 @@
 /** Dependencies **/
 var dev_objects = require(appRoot + '/src/server/models/test-device-list.js'); 
 
-//** Exports **//
-module.exports = routes;
-
 /** API Routes **/ 
 var routes = [
 	{
@@ -13,11 +10,11 @@ var routes = [
 		method: 'GET',
 		handler: getDeviceList
 	},{
-		path: '/api/device',
+		path: '/api/device/{id}',
 		method: 'GET',
 		handler: getDevice
 	},{
-		path: '/api/device',
+		path: '/api/device/{id}',
 		method: 'POST',
 		handler: postDevice
 	}
@@ -29,11 +26,17 @@ function getDeviceList(request, reply){
 };
 
 function getDevice(request, reply){
+	var id = encodeURIComponent(request.params.id);
+	console.log('Request status: id: '+ id);
+	reply('Request status: id: '+ id);
+};
+
+function postDevice(request, reply){
+	var id = encodeURIComponent(request.params.id);
+	console.log('id: '+ id + ' Object: ' + request.payload);
 	console.log(request.payload);
 	reply('Build me!');
 };
 
-function postDevice(request, reply){
-	console.log(request.payload);
-	reply('Build me!');
-};
+//** Exports **//
+module.exports = routes;
