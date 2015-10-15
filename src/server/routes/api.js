@@ -10,11 +10,11 @@ var routes = [
 		method: 'GET',
 		handler: getDeviceList
 	},{
-		path: '/api/device',
+		path: '/api/device/{id}',
 		method: 'GET',
 		handler: getDevice
 	},{
-		path: '/api/device',
+		path: '/api/device/{id}',
 		method: 'POST',
 		handler: postDevice
 	}
@@ -26,11 +26,14 @@ function getDeviceList(request, reply){
 };
 
 function getDevice(request, reply){
-	console.log(request.payload);
-	reply('Build me!');
+	var id = encodeURIComponent(request.params.id);
+	console.log('Request status: id: '+ id);
+	reply('Request status: id: '+ id);
 };
 
 function postDevice(request, reply){
+	var id = encodeURIComponent(request.params.id);
+	console.log('Id: '+ id + ' Object:');
 	console.log(request.payload);
 	reply('Build me!');
 };
