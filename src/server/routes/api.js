@@ -1,6 +1,7 @@
 'use strict';
 
 /** Dependencies **/
+var models = require(appRoot + '/src/server/models');
 var dev_objects = require(appRoot + '/src/server/models/test-device-list.js'); 
 
 /** API Routes **/ 
@@ -33,7 +34,7 @@ function getDevice(request, reply){
 
 function postDevice(request, reply){
 	var id = encodeURIComponent(request.params.id);
-	console.log('Id: '+ id + ' Object:');
+	console.log('Id: '+ id + ' putObject:');
 	console.log(request.payload);
 	reply('Build me!');
 };
