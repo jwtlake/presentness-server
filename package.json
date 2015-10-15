@@ -18,6 +18,7 @@
   "homepage": "https://github.com/jwtlake/presentness_server",
   "dependencies": {
     "hapi": "^10.3.0",
-    "nconf": "^0.8.1"
+    "nconf": "^0.8.1",
+    "thinky": "^2.1.9"
   }
 }

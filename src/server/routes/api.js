@@ -34,7 +34,7 @@ function getDevice(request, reply){
 
 function postDevice(request, reply){
 	var id = encodeURIComponent(request.params.id);
-	console.log('Id: '+ id + ' putObject:');
+	console.log('id: '+ id + ' Object: ' + request.payload);
 	console.log(request.payload);
 	reply('Build me!');
 };
