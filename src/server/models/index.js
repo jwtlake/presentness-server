@@ -1,8 +1,9 @@
 'use strict';
 
 //** Dependencies **//
-var thinky = require('thinky')
+var thinky = require('thinky')();
 var r = thinky.r;
+var type = thinky.type;
 
 //** Models **//
 var Device = thinky.createModel('Device', {
