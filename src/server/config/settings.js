@@ -8,6 +8,11 @@ var defaults = {
 	hapi:{
 		port: 3001
 	},
+	thinky:{
+		host: 'localhost',
+		port: '28015',
+		db: 'presentness'
+	},
 	postgress:{
 		host: 'localhost',
 		port: '5432',

@@ -18,5 +18,5 @@ var common = [
 var routes = common.concat(api);
 // when adding more routes concat(api,ui,etc)
 
-// Export Routes
+//** Export Routes **//
 module.exports = routes;
