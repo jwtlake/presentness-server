@@ -1,4 +1,4 @@
-# presentness_server
+# presentness-server
 
 ## Noun
 "the state of being present"
